@@ -13,6 +13,7 @@ Set your GPIO pins and digit count → flash and enjoy bright display on ultra-l
 
 int main(void)
 {
+
     TM1637_Init();
     TM1637_SetBrightness(7);
 
