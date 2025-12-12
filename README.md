@@ -10,3 +10,17 @@ Optimized for CH32V003, CH32V203, CH32V307 — the world's cheapest RISC-V MCUs!
 - Key reading if buttons present
 
 Set your GPIO pins and digit count → flash and enjoy bright display on ultra-low-cost CH32!
+
+int main(void)
+{
+    TM1637_Init();
+    TM1637_SetBrightness(7);
+
+    while(1)
+    {
+        TM1637_ShowNumber(1234, false);
+                Delay_Ms(1000);
+                TM1637_ShowNumberDP(5678, DOT_AFTER_3RD, false);  // 5.678
+                Delay_Ms(1000);
+    }
+}
